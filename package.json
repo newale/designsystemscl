@@ -1,0 +1,23 @@
+{
+  "name": "designsystemscl",
+  "version": "0.0.0-rc.1",
+  "description": "designsystems.cl design system",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/newale/designsystemscl.git"
+  },
+  "author": "ale",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/newale/designsystemscl/issues"
+  },
+  "homepage": "https://github.com/newale/designsystemscl#readme",
+  "devDependencies": {
+    "lerna": "^3.21.0"
+  }
+}
