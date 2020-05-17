@@ -7,6 +7,8 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
 
+import {Nav, Typography} from '@dscl/components';
+
 type Data = {
   site: {
     siteMetadata: {
@@ -35,36 +37,46 @@ const BlogIndex = ({ data, location }: PageProps<Data>) => {
   const posts = data.allMarkdownRemark.edges
 
   return (
-    <Layout location={location} title={siteTitle}>
-      <SEO title="All posts" />
-      <Bio />
-      {posts.map(({ node }) => {
-        const title = node.frontmatter.title || node.fields.slug
-        return (
-          <article key={node.fields.slug}>
-            <header>
-              <h3
-                style={{
-                  marginBottom: rhythm(1 / 4),
-                }}
-              >
-                <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-                  {title}
-                </Link>
-              </h3>
-              <small>{node.frontmatter.date}</small>
-            </header>
-            <section>
-              <p
-                dangerouslySetInnerHTML={{
-                  __html: node.frontmatter.description || node.excerpt,
-                }}
-              />
-            </section>
-          </article>
-        )
-      })}
-    </Layout>
+    <main>
+      <Nav>
+        <ul>
+          <li>Item 1</li>
+          <li>Item 2</li>
+          <li>Item 3</li>
+        </ul>
+      </Nav>
+      <Typography>Hello</Typography>
+    </main>
+    // <Layout location={location} title={siteTitle}>
+    //   <SEO title="All posts" />
+    //   <Bio />
+    //   {posts.map(({ node }) => {
+    //     const title = node.frontmatter.title || node.fields.slug
+    //     return (
+    //       <article key={node.fields.slug}>
+    //         <header>
+    //           <h3
+    //             style={{
+    //               marginBottom: rhythm(1 / 4),
+    //             }}
+    //           >
+    //             <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
+    //               {title}
+    //             </Link>
+    //           </h3>
+    //           <small>{node.frontmatter.date}</small>
+    //         </header>
+    //         <section>
+    //           <p
+    //             dangerouslySetInnerHTML={{
+    //               __html: node.frontmatter.description || node.excerpt,
+    //             }}
+    //           />
+    //         </section>
+    //       </article>
+    //     )
+    //   })}
+    // </Layout>
   )
 }
 
