@@ -2,7 +2,6 @@
   "name": "@dscl/components",
   "version": "1.0.0-rc.1",
   "private": true,
-
   "description": "Components used in designsystemscl",
   "author": "ale",
   "homepage": "https://github.com/newale/designsystemscl/tree/master/packages/components#readme",
@@ -23,9 +22,36 @@
     "url": "git+https://github.com/newale/designsystemscl.git"
   },
   "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "build": "rollup -c",
+    "build:watch": "rollup -c -w",
+    "lint": "standard",
+    "format": "prettier-standard --format",
+    "test": "jest --coverage"
   },
   "bugs": {
     "url": "https://github.com/newale/designsystemscl/issues"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^13.0.0",
+    "@rollup/plugin-node-resolve": "^8.0.1",
+    "@types/jest": "^24.0.24",
+    "jest": "^24.9.0",
+    "rollup": "^1.27.13",
+    "rollup-plugin-peer-deps-external": "^2.2.0",
+    "rollup-plugin-typescript2": "^0.25.3",
+    "standard": "^14.3.1",
+    "standard-prettier": "^1.0.1",
+    "ts-jest": "^24.2.0",
+    "typescript": "^3.7.3"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node"
+  },
+  "standard": {
+    "ignore": [
+      "node_modules/",
+      "build/"
+    ]
   }
 }
