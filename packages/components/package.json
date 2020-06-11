@@ -6,7 +6,15 @@
   "author": "ale",
   "homepage": "https://github.com/newale/designsystemscl/tree/master/packages/components#readme",
   "license": "UNLICENSED",
-  "main": "lib/components.js",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "npm run build:watch",
+    "build": "rollup -c",
+    "build:watch": "rollup -c -w",
+    "lint": "standard",
+    "format": "prettier-standard --format",
+    "test": "jest --coverage"
+  },
   "directories": {
     "lib": "lib",
     "test": "__tests__"
@@ -21,13 +29,6 @@
     "type": "git",
     "url": "git+https://github.com/newale/designsystemscl.git"
   },
-  "scripts": {
-    "build": "rollup -c",
-    "build:watch": "rollup -c -w",
-    "lint": "standard",
-    "format": "prettier-standard --format",
-    "test": "jest --coverage"
-  },
   "bugs": {
     "url": "https://github.com/newale/designsystemscl/issues"
   },
@@ -35,7 +36,11 @@
     "@rollup/plugin-commonjs": "^13.0.0",
     "@rollup/plugin-node-resolve": "^8.0.1",
     "@types/jest": "^24.0.24",
+    "@types/react": "^16.9.36",
+    "@types/react-dom": "^16.9.8",
     "jest": "^24.9.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
     "rollup": "^1.27.13",
     "rollup-plugin-peer-deps-external": "^2.2.0",
     "rollup-plugin-typescript2": "^0.25.3",
@@ -53,5 +58,9 @@
       "node_modules/",
       "build/"
     ]
+  },
+  "peerDependencies": {
+    "react": "^16",
+    "react-dom": "^16"
   }
 }

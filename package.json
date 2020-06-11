@@ -5,6 +5,7 @@
   "main": "index.js",
   "private": true,
   "scripts": {
+    "dev": "lerna run dev --stream --parallel",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
