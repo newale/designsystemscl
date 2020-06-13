@@ -42,8 +42,9 @@ const Nav = () => (
 
 const AppRouter = () => (
   <Layout nav={Nav}>
-    
-
+    <Router>
+      <Pages />
+    </Router>
   </Layout>
     
 );
