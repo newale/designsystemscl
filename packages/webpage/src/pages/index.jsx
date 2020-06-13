@@ -1,7 +1,7 @@
 import React from 'react';
 import {Layout} from '@dscl/components';
 
-const Index = (props) => (
+const Index = ({nav}) => (
   <Layout>
     <div>
       <p>Home</p>
