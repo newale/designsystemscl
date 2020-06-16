@@ -1,10 +1,7 @@
 import React from 'react';
-import {Layout} from '@dscl/components';
 
 const About = (props) => (
-  <Layout>
-    <h1>About</h1>
-  </Layout>
+  <h1>About</h1>
 );
 
 export default About;

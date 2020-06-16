@@ -1,17 +1,12 @@
 import * as React from 'react';
 
-interface Props {}
+interface Props {
+  children: any,
+}
 
-const Header: React.FunctionComponent<Props> = () => (
+const Header: React.FunctionComponent<Props> = ({children}) => (
   <header>
-    <nav>
-      <ul>
-        <li>home</li>
-        <li>about</li>
-        <li>blog</li>
-        <li>#social</li>
-      </ul>
-    </nav>
+    {children}
   </header>
 )
 

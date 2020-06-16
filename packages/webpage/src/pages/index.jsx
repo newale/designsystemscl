@@ -1,13 +1,8 @@
 import React from 'react';
-import {Layout} from '@dscl/components';
+import {BasicLayout} from './../layouts';
 
-const Index = ({nav}) => (
-  <Layout>
-    <div>
-      <p>Home</p>
-    </div>
-  </Layout>
-  
+const Index = () => (
+  <h1>Dear Home</h1>
 );
 
 export default Index;
